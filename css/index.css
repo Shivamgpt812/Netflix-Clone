@@ -1,0 +1,645 @@
+/* Define CSS variables */
+:root{
+    --base:#000;
+    --primary:#e60a15;
+    --primary-dark:#c50d16;
+    --secondary:#f4d125;
+    --light:#fff;
+    --dark:#333;
+    --accent:#fc0;
+    --success:#0c0;
+    --warning:#f90;
+    --error:red;
+    --info:#0071eb;
+    --body:#000;
+    --text:#fff;
+    --heading:#fff;
+    --black:#000;
+    --white:#fff;
+    --gray:grey;
+    --dark-gray:#242424;
+    --silver:#bfbfbf;
+    --space-0:0rem;
+    --space-1:0.5rem;
+    --space-2:1rem;
+    --space-3:1.5rem;
+    --space-4:2rem;
+    --space-5:2.5rem;
+    --space-6:3rem;
+    --container:calc(100% - 4.8rem)
+}
+
+/* Define font-face rules for NetflixSans */
+@font-face{
+    font-display:swap;
+    font-family:NetflixSans;
+    font-style:normal;
+    font-weight:300;src:local(NetflixSans),url(../fonts/NetflixSans-Light.woff2) format("woff2"),url(../fonts/NetflixSans-Light.woff) format("woff")
+}
+
+@font-face{
+    font-display:swap;
+    font-family:NetflixSans;
+    font-style:normal;
+    font-weight:400;
+    src:local(NetflixSans),url(../fonts/NetflixSans-Regular.woff2) format("woff2"),url(../fonts/NetflixSans-Regular.woff) format("woff")
+}
+
+@font-face{
+    font-display:swap;
+    font-family:NetflixSans;
+    font-style:normal;
+    font-weight:500;src:local(NetflixSans),url(../fonts/NetflixSans-Medium.woff2) format("woff2"),url(../fonts/NetflixSans-Medium.woff) format("woff")
+}
+
+@font-face{
+    font-display:swap;
+    font-family:NetflixSans;
+    font-style:normal;font-weight:700;src:local(NetflixSans),url(../fonts/NetflixSans-Bold.woff2) format("woff2"),url(../fonts/NetflixSans-Bold.woff) format("woff")
+}
+
+*{font-family:Segoe UI,NetflixSans,sans-serif;margin:0;padding:0
+
+}*
+
+/* Reset styles for consistent box-sizing */
+,:after,:before{
+    box-sizing:border-box
+}
+
+/* Base HTML styles */
+html{
+    font-size:10px;
+    scroll-behavior:smooth
+}
+
+/* Base styles for body */
+body{
+    background-color:var(--body);
+    color:var(--text);
+    font-family:Segoe UI,NetflixSans,sans-serif,Arial,Noto Sans;
+    font-size:1.8rem;
+    font-weight:400;
+    line-height:1.6
+}
+
+/* Typography styles */
+label{
+    font-size:1.2rem
+
+}
+
+h2,h4,h5{
+    color:var(--headings);line-height:1.3
+}
+
+h2,h4,h5,p{
+    margin-bottom:1em
+}
+
+h2{
+    font-size:3.2rem
+}
+
+h4{
+    font-size:1.4rem
+}
+
+h5{
+    font-size:1.6rem
+}
+
+/* Styles for links */
+a{
+    color:#000
+}
+
+/* Remove default underlines from links */
+a,a:hover{
+    text-decoration:none
+}
+
+/* List styles */
+ul{
+    padding-left:2rem
+}
+
+/* Button styles */
+button{
+    background-color:transparent;
+    border:none;
+    color:#000
+}
+
+button:not(:disabled){
+    cursor:pointer
+}
+
+button:focus{
+    outline:none
+}
+
+/* Container styles */
+.container{
+    margin:auto;
+    max-width:var(--container);
+    width:100%
+}
+
+/* Flexbox utility styles */
+.flex{
+    align-items:center;
+    display:flex;
+    justify-content:space-between;
+    }
+    
+    p{
+        color:var(--neutral-200)
+    }
+    
+    /* Image styles */
+    img{
+        border-radius:.5rem;
+        height:100%;
+        object-fit:cover;
+        width:100%
+    }
+    
+    /* Text alignment utility styles */
+    .text-center{
+        text-align:center
+    }
+
+    /* Padding utility styles */
+    .even-space{
+        padding-block:4rem
+    }
+    
+    .even-space h2{
+        margin-bottom:1.2rem
+    }
+    
+    .even-space .visual{
+        position:relative
+    }
+    
+    /* Video styles */
+    video{
+        width:100%
+    }
+    
+    .enjoy .video-wrap{
+        left:13%;
+        position:absolute;
+        top:20%;
+        width:74%;
+        z-index:-1
+    }
+    
+    .everywhere .video-wrap{
+        left:19%;
+        position:absolute;
+        top:7%;
+        width:61%;
+        z-index:-1
+    }
+    
+    .bottom-seperator{
+        border-bottom:1rem solid var(--dark-gray)
+    }
+    
+    .pt-6{
+        padding-top:var(--space-6)
+    }
+    
+    @font-face{
+        font-family:customicons;
+        font-style:normal;
+        font-weight:400;
+        src:url(../fonts/customicons.eot?35007724);
+        src:url(../fonts/customicons.eot?35007724#iefix) format("embedded-opentype"),url(../fonts/customicons.woff2?35007724) format("woff2"),url(../fonts/customicons.woff?35007724) format("woff"),url(../fonts/customicons.ttf?35007724) format("truetype"),url(../fonts/customicons.svg?35007724#customicons) format("svg")
+    }
+        [class*=" icon-"]:before{
+            speak-as:never;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            display:inline-block;
+            font-family:customicons;
+            font-style:normal;
+            font-variant:normal;
+            font-weight:400;
+            line-height:1em;
+            margin-left:.2em;
+            margin-right:.2em;
+            text-align:center;
+            text-decoration:inherit;
+            text-transform:none;
+            width:1em
+        }
+        
+        .icon-plus:before{
+            content:"\e801"
+        }
+        
+        .icon-globe:before{
+            content:"\e802"
+        }
+        
+        .icon-right-open-big:before{
+            content:"\e806"
+        }
+        
+        .btn{
+            background-color:var(--btn-bg,var(--primary));border:.1rem solid var(--btn-border,var(--primary));border-radius:var(--btn-radius,.4rem);color:var(--btn-color,var(--light));font-family:Segoe UI;font-size:1.4rem;font-weight:500;isolation:isolate;overflow:hidden;padding:var(--space-1) var(--space-3);position:relative;transition:.3s
+        }
+        
+        .btn:hover{
+            --btn-bg:var(--btn-hover-after,var(--primary-dark))
+        }
+        
+        .btn:focus{
+            outline:1px solid var(--dark)
+        }
+        
+        .form-group{
+            position:relative
+        }
+        
+        .form-group input{
+            background-color:hsla(0,0%,9%,.7);
+            border:.1rem solid var(--gray);
+            border-radius:.3rem;
+            color:var(--white);
+            font-size:1.6rem;
+            margin-bottom:var(--space-4);
+            padding:var(--space-4) var(--space-2) var(--space-1) var(--space-3);width:100%
+        }
+        
+        .form-group input:focus{
+            outline:.1rem solid var(--white)
+        }
+        
+        .form-group input:focus~label,.form-group input:not(:placeholder-shown)~label{
+            font-size:1rem;
+            top:var(--space-1)
+        }
+        
+        .form-group label{
+            color:var(--white);font-size:1.8rem;left:var(--space-3);opacity:.7;pointer-events:none;position:absolute;top:var(--space-2);transition:.3s
+        }
+        
+        form .btn{
+            font-size:1.8rem;
+            padding:var(--space-2);
+            padding-left:var(--space-4)
+        }
+        
+        .download{align-items:center;
+            background-color:var(--body);
+            border:.2rem solid var(--gray);
+            border-radius:1rem;
+            bottom:8%;
+            display:flex;
+            justify-content:space-between;
+            left:0;
+            margin:auto;
+            overflow:hidden;
+            padding:var(--space-1) var(--space-2);position:absolute;right:0;width:65%
+        }
+        
+        .download-content{
+            margin-right:auto;
+            text-align:left
+        }
+        
+        .download-img{
+            margin-right:var(--space-2)
+        }
+        
+        .download-img img{
+            height:4rem;
+            width:auto
+        }
+        
+        .download-icon{
+            height:4rem;
+            width:4rem
+        }
+        
+        .download h4{
+            font-size:1.6rem;
+            margin-bottom:0
+        }
+        
+        .download p{
+            color:var(--info);
+            font-size:1.2rem;
+            margin-bottom:0
+        }
+        
+        .accordian-header{
+            background-color:var(--dark-gray);
+            transition:.2s
+        }
+        
+        .accordian-header h5{
+            font-size:1.8rem;
+            font-weight:400;
+            margin:0
+        }
+        
+        .accordian-header:hover{
+            background-color:#4d4d4d
+        }
+        
+        .accordian p{
+            margin-bottom:0
+        }
+        
+        .accordian-button{
+            align-items:center;
+            color:var(--white);
+            display:flex;
+            gap:var(--space-2);
+            justify-content:space-between;
+            padding:var(--space-3);
+            width:100%
+        }
+        
+        .accordian-button .icon{
+            font-size:2rem;
+            font-weight:400;
+            transition:.3s
+        }
+        
+        .accordian-wrap{
+            background-color:var(--dark-gray);
+            min-height:0;
+            overflow:hidden
+        }
+        
+        .accordian-wrap p{
+            padding:var(--space-3)
+        }
+        
+        .accordian-body{
+            display:grid;
+            grid-template-rows:0fr;
+            margin-top:var(--space-2);
+            overflow:hidden;
+            transition:.3s
+        }
+        
+        .accordian-item{
+            margin-block:var(--space-3)
+        }
+        
+        .accordian .active .accordian-body{
+            grid-template-rows:1fr
+        }
+        
+        .accordian .active .icon{
+            transform:rotate(45deg)
+        }
+        
+        .language-dropdown{
+            height:3rem;
+            margin-inline:auto var(--space-2);
+            position:relative;
+            width:6rem
+        }
+        
+        .language-dropdown:after{
+            border-color:transparent #fff #fff transparent;
+            border-style:solid;
+            border-width:.4rem;
+            content:"";
+            pointer-events:none;
+            position:absolute;
+            right:1rem;
+            top:40%;
+            transform:translateY(-50%) rotate(45deg)
+        }
+        
+        .language-dropdown .icon{
+            align-items:center;
+            display:flex;
+            font-size:1.6rem;
+            height:100%;
+            justify-content:center;
+            left:var(--space-2);
+            pointer-events:none;
+            position:absolute;
+            z-index:2
+        }
+        
+        .language-dropdown select{
+            appearance:none;
+            border:.1rem solid var(--gray);
+            border-radius:.3rem;
+            color-scheme:dark;
+            font-size:1.4rem;
+            height:100%;
+            left:0;
+            padding-inline:3rem;
+            position:absolute;
+            top:0;
+            width:100%;
+        }
+        
+        .language-dropdown select option{
+            padding:var(--space-2)
+        }
+        
+        .logo{
+            border-radius:0;
+            color:var(--primary);
+            height:2.5rem;
+            text-transform:uppercase;
+            width:9rem;
+        }
+        
+        header{
+            left:0;
+            padding:var(--space-5) 0;
+            position:absolute;
+            top:0;
+            width:100%;
+            z-index:2;
+        }
+        
+        /* Background image for banner */
+        .banner{
+            background-image:url(../img/banner.webp);
+            background-size:cover;
+            isolation:isolate;
+            padding:13rem 2rem 5rem;
+            position:relative;
+            width:100%
+        }
+        
+        /* Overlay effect for banner */
+        .banner:after{
+            background-image:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.5),rgba(0,0,0,.9));
+            content:"";
+            inset:0;
+            pointer-events:none;
+            position:absolute;
+            z-index:-1
+        }
+        
+        .banner h2{
+            font-weight:600;
+            margin-bottom:1.6rem
+        }
+        
+        /* Footer styles */
+        footer,footer a,footer p{
+            color:var(--silver);
+            font-size:1.6rem
+        }
+        
+        footer a{
+            text-decoration:underline
+        }
+        
+        footer ul{
+            grid-gap:var(--space-1);
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            list-style-type:none;
+            margin:var(--space-6) 0;
+            padding-left:0
+        }
+        
+        footer .language-dropdown{
+            margin:0;
+            margin-bottom:var(--space-6)
+        }
+        
+        /*Media queries for different screen sizes */
+        @media 
+        (min-width:576px){
+            :root{--container:54rem
+            }
+        }
+        
+        @media 
+        (min-width:768px){
+            :root{
+                --container:72rem
+            }
+            h2{
+                font-size:4.8rem
+            }
+            h4{
+                font-size:2rem
+            }
+            h5{
+                font-size:1.8rem
+            }
+            P{
+                font-size:2.4rem
+            }
+            .even-space{
+                padding-block:6rem
+            }
+            .even-columns{
+                align-items:center;
+                display:flex;
+                text-align:left
+            }
+            .even-columns>div{
+                width:50%
+            }
+            .order-1{
+                order:1
+            }
+            .btn{
+                font-weight:700
+            }
+            form{
+                display:flex;
+                gap:var(--space-2);margin:auto;
+                max-width:55%
+            }
+            .form-group{
+                width:65%
+            }
+            .form-group input{
+                padding-block:var(--space-5) var(--space-2)
+            }
+            .form-group label{
+                top:var(--space-3)
+            }
+            .btn-wrap{
+                width:35%
+            }
+            .btn-wrap .btn{
+                font-size:2rem;
+                font-weight:700;
+                margin:0;
+                padding-block:var(--space-3);width:100%
+            }
+            .download{
+                padding-inline:var(--space-2);
+                width:55%
+            }
+            .download-img{
+                margin-right:var(--space-4)
+            }
+            .download-img img{
+                height:7rem
+            }
+            .download p{
+                font-size:1.4rem
+            }
+            .accordian-header h5{
+                font-size:2.4rem
+            }
+            .accordian-button .icon{
+                font-size:3.5rem
+            }
+            .accordian-body{
+                margin-top:var(--space-1)
+            }
+            .language-dropdown{
+                margin-inline:auto var(--space-4);
+                width:13rem
+            }
+            .language-dropdown select{
+                padding-inline:4rem
+            }
+            .logo{
+                height:4rem;
+                width:14.8rem
+            }
+            .banner h2{
+                font-weight:900
+            }
+            .banner{
+                padding-block:30rem 20rem
+            }
+            .banner p{
+                font-size:2.2rem
+            }
+            footer ul{
+                grid-template-columns:repeat(3,1fr)
+            }
+        }
+        
+        @media (min-width:992px){
+            :root{
+                --container:96rem
+            }
+        }
+        
+        @media (min-width:1200px){
+            :root{
+                --container:104rem
+            }
+        }
+        
+        @media (min-width:1400){
+            :root{--container:132rem}}
+/*# sourceMappingURL=map/index.css.map */
